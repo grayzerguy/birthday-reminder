@@ -1,4 +1,3 @@
-import React from "react";
 import PersonModel from "./models/PersonModel";
 
 const List = ({ people }: any): JSX.Element => {
