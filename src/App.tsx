@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import data from "./Data";
 import List from "./List";
+import PersonModel from "./models/PersonModel";
 
-// useState<ProductModel[]>([]);
 function App(): JSX.Element {
-  const [people, setPeople] = useState(data);
+  const [people, setPeople] = useState<PersonModel[]>(data);
+
   const clear = (): void => {
     setPeople([]);
   };
   const getAllBack = (): void => {
     setPeople(data);
   };
-  // render the list of people automatically
 
   return (
     <main>
@@ -23,7 +23,6 @@ function App(): JSX.Element {
         {people.length === 0 && (
           <button onClick={getAllBack}>Get All Back</button>
         )}
-        {/* <button onClick={getAllBack}>Get All</button> */}
       </section>
     </main>
   );
