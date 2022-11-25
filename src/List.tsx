@@ -1,6 +1,11 @@
 import PersonModel from "./models/PersonModel";
 
-const List = ({ people }: any): JSX.Element => {
+interface People {
+  people: PersonModel[];
+}
+
+const List = ({ people }: People): JSX.Element => {
+  console.log("people", typeof people);
   return (
     <>
       {people.map((person: PersonModel) => {
